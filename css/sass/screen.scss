@@ -1,0 +1,535 @@
+@import "compass/reset";
+@import "compass/css3";
+
+@mixin treeStyles { height:0; position:absolute; width:0; @include border-radius(40px); }
+
+body {
+    color:#000;
+    background-color:#eee;
+    font-family:'Pompiere', Helvetica, sans-serif;
+    text-transform:uppercase;
+     -webkit-user-select:none;
+     -webkit-touch-callout:none;
+}
+
+#footer {
+    text-align:center;
+    border-top:red 2px solid;
+    @include border-top-left-radius(250px);
+    @include border-top-right-radius(250px);
+    width:650px;
+    margin:0 auto;
+    height:100px;
+    background-color:#eee;
+    p {
+        padding:50px;
+    }
+    img {
+        padding:0 10px;   
+    }
+}
+
+#christmasText {
+    padding: 20px;
+   margin: 0 auto;
+   background: red;
+   color: #fff;
+   border: 2px dashed #fff;
+   @include border-radius(10px);
+   box-shadow: 0 0 0 4px red, 2px 1px 6px 4px;
+   font-weight: normal;
+    @include transition-property(all);
+    @include transition-duration(2s);
+    @include transition-timing-function(ease-in-out);
+    @include transition-delay(initial);  
+    width:650px;
+}
+
+h1 {
+    font-size:2em;  
+    text-align:center;
+}
+
+a:link, a:visited {color:red; text-decoration:none;}     
+a:hover, a:active {color:green; text-decoration:none;}  
+
+
+#backgroundContainer {
+    margin:0 auto;
+    height:500px;
+    width:500px;
+    background:url(../../images/bg.png) no-repeat center top;
+    @include transition-property(background);
+    @include transition-duration(2s);
+    @include transition-timing-function(ease-in-out);
+    @include transition-delay(initial);    
+}
+
+
+#treeFireworksContainer {
+    position:relative;
+    #innerTree {
+        @include transition-property(all);
+        @include transition-duration(2s);
+        @include transition-timing-function(ease-in-out);
+        @include transition-delay(initial);
+    }
+}
+
+#tree {
+    border-left:20px solid transparent;
+    border-right:20px solid transparent;
+    border-bottom: 20px solid green;
+    left:220px;
+    top:60px;
+    @include treeStyles;
+    &:before {
+        content:'';
+        border-left:40px solid transparent;
+        border-right:40px solid transparent;
+        border-bottom:40px solid green;
+        left:-40px;
+        top:15px;
+        @include treeStyles;
+    }
+    &:after {
+        content:'';
+        border-left:60px solid transparent;
+        border-right:60px solid transparent;
+        border-bottom:60px solid green;
+        left:-60px;
+        top:40px;
+        @include treeStyles;    
+    }
+}
+
+.bauble {
+    @include border-radius(15px);
+    width:30px;
+    height:30px;
+    position:absolute;
+    top:265px;
+    left:225px;
+}
+
+.silver {
+    @include background-image(radial-gradient(45px 45px, #c1c1c1 10px, #909090 30px));
+    left:180px;
+    top:250px;
+}
+
+.red {
+    @include background-image(radial-gradient(45px 45px, #fd7070 10px, #f00 30px));
+}
+
+.green {
+    @include background-image(radial-gradient(45px 45px, #01cb01 10px, #00a200 30px));
+    left:270px;
+    top:250px;
+}    
+
+.small {
+    width:15px;
+    height:15px;
+    top:150px;
+}
+
+.small_green { 
+    @include background-image(radial-gradient(45px 45px, #01cb01 10px, #00a200 30px));
+    left:210px;
+}
+.small_red { 
+    @include background-image(radial-gradient(45px 45px, #fd7070 10px, #f00 30px));
+    top:155px;
+    left:233px;
+}
+.small_silver { 
+    @include background-image(radial-gradient(45px 45px, #c1c1c1 10px, #909090 30px));
+    left:255px;
+}
+
+#treeBase {
+    border-left:80px solid transparent;
+    border-right:80px solid transparent;
+    border-bottom:80px solid green;
+    left:160px;
+    top:130px;
+    @include treeStyles;
+    &:before {
+        content:'';
+        border-left:100px solid transparent;
+        border-right:100px solid transparent;
+        border-bottom:100px solid green;
+        left:-100px;
+        top:40px;
+        @include treeStyles;    
+    }
+    &:after {
+        content:'';
+        border-left:120px solid transparent;
+        border-right:120px solid transparent;
+        border-bottom:120px solid green;
+        left:-120px;
+        top:80px;
+        @include treeStyles;    
+    }
+}
+
+#pot {
+    border-top: 70px solid brown;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 70px;
+    position:absolute;
+    left:180px;
+    top:330px;
+    z-index:100;
+}
+
+#letter1, #letter2, #letter3, #letter4, #letter5, #letter6, #letter7, #letter8, #letter9, #letter10, #letter11, #letter12, #letter13, #letter14, #letter15, #letter16, #letter17, #letter18, #letter19, #letter20, #letter21 {
+    position:absolute;
+    top:360px;
+    left:230px;
+    @include transition-property(all);
+    @include transition-duration(2s);
+    @include transition-timing-function(ease-in-out);
+    @include translate3d(0,0,0);
+    font-size:2em;
+}    
+
+#letter1 {
+    @include transition-delay(0.1s);
+}
+#letter2 {
+    @include transition-delay(0.3s);
+}
+#letter3 {
+    @include transition-delay(0.9s);
+}
+#letter4 {
+    @include transition-delay(0.7s);
+}
+#letter5 {
+    @include transition-delay(0.5s);
+}
+#letter6 {
+    @include transition-delay(0.4s);
+}
+#letter7 {
+    @include transition-delay(0.2s);
+}
+#letter8 {
+    @include transition-delay(1.0s);
+}
+#letter9 {
+    @include transition-delay(1.2s);
+}
+#letter10 {
+    @include transition-delay(0.5s);
+}
+#letter11 {
+    @include transition-delay(0.8s);
+}
+#letter12 {
+    @include transition-delay(0.1s);
+}
+#letter13 {
+    @include transition-delay(0.7s);
+}
+#letter14 {
+    @include transition-delay(0.3s);
+}
+#letter15 {
+    @include transition-delay(1.1s);
+}
+#letter16 {
+    @include transition-delay(0.6s);
+}
+#letter17{
+    @include transition-delay(0.4s);
+}
+#letter18 {
+    @include transition-delay(0.2s);
+}
+#letter19 {
+    @include transition-delay(0.9s);
+}
+#letter20 {
+    @include transition-delay(0.5s);
+}
+#letter21 {
+    @include transition-delay(0.3s);
+}
+
+
+.fireworks {
+    position: absolute;
+    left:230px;
+    top:360px;
+    -webkit-animation-iteration-count: infinite; 
+    animation-iteration-count:infinite;
+    opacity: 0.0;
+    height:3px;
+    width:3px;
+    -webkit-border-radius: 100px;
+    border-radius:100px;
+}
+
+#fireworks1 {
+    border: 3px dotted yellow;
+}
+
+#fireworks2 {
+    border: 3px dotted white;
+}
+
+#fireworks3 {
+    border: 2px dotted red;
+}
+
+#fireworks4 {
+    border: 4px dotted green;
+}
+
+#fireworks5 {
+    border: 2px dotted red;
+}
+
+#fireworks6 {
+    border: 2px dotted blue;
+}
+
+
+@keyframes explosion1 {
+    0% {opacity: 1.0;}
+    70% {width:3px; height:3px;opacity: 1.0;  transform: translate(-50px, -200px);}
+    90% {width:100px; height:100px;opacity: 1.0;}
+    99% {width:100px; height:100px; opacity: 0.0; transform: translate(-50px, -200px);}
+    100% {width:3px; height:3px;opacity: 0.0;}
+}
+@-webkit-keyframes explosion1 {
+    0% {opacity: 1.0;}
+    70% {width:3px; height:3px;opacity: 1.0;  -webkit-transform: translate(-50px, -250px);}
+    90% {width:100px; height:100px;opacity: 1.0;}
+    99% {width:100px; height:100px; opacity: 0.0; -webkit-transform: translate(-50px, -250px);}
+    100% {width:3px; height:3px;opacity: 0.0;}
+}
+
+@keyframes explosion2 {
+    0% {opacity: 1.0;}
+    70% {width:3px; height:3px;opacity: 1.0;  transform: translate(125px, -200px);}
+    90% {width:100px; height:100px;opacity: 1.0;}
+    99% {width:100px; height:100px; opacity: 0.0; transform: translate(125px, -200px);}
+    100% {width:3px; height:3px;opacity: 0.0;}
+}
+@-webkit-keyframes explosion2 {
+    0% {opacity: 1.0;}
+    70% {width:3px; height:3px;opacity: 1.0;  -webkit-transform: translate(125px, -250px);}
+    90% {width:100px; height:100px;opacity: 1.0;}
+    99% {width:100px; height:100px; opacity: 0.0; -webkit-transform: translate(125px, -250px);}
+    100% {width:3px; height:3px;opacity: 0.0;}
+}
+
+@keyframes explosion3 {
+    0% {opacity: 1.0;}
+    70% {width:3px; height:3px;opacity: 1.0;  transform: translate(-150px, -150px);}
+    90% {width:80px; height:80px;opacity: 1.0;}
+    99% {width:80px; height:80px; opacity: 0.0; transform: translate(-150px, -150px);}
+    100% {width:3px; height:3px;opacity: 0.0;}
+}
+@-webkit-keyframes explosion3 {
+    0% {opacity: 1.0;}
+    70% {width:3px; height:3px;opacity: 1.0;  -webkit-transform: translate(-100px, -150px);}
+    90% {width:80px; height:80px;opacity: 1.0;}
+    99% {width:80px; height:80px; opacity: 0.0; -webkit-transform: translate(-100px, -150px);}
+    100% {width:3px; height:3px;opacity: 0.0;}
+}
+
+@keyframes explosion4 {
+    0% {opacity: 1.0;}
+    70% {width:3px; height:3px;opacity: 1.0;  transform: translate(75px, -175px);}
+    90% {width:120px; height:120px;opacity: 1.0;}
+    99% {width:120px; height:120px; opacity: 0.0; transform: translate(75px, -175px);}
+    100% {width:3px; height:3px;opacity: 0.0;}
+}
+@-webkit-keyframes explosion4 {
+    0% {opacity: 1.0;}
+    70% {width:3px; height:3px;opacity: 1.0;  -webkit-transform: translate(75px, -175px);}
+    90% {width:120px; height:120px;opacity: 1.0;}
+    99% {width:120px; height:120px; opacity: 0.0; -webkit-transform: translate(75px, -175px);}
+    100% {width:3px; height:3px;opacity: 0.0;}
+}
+
+@keyframes explosion5 {
+    0% {opacity: 1.0;}
+    70% {width:3px; height:3px;opacity: 1.0;  transform: translate(-150px, -180px);}
+    90% {width:160px; height:160px;opacity: 1.0;}
+    99% {width:160px; height:160px; opacity: 0.0; transform: translate(-150px, -180px);}
+    100% {width:3px; height:3px;opacity: 0.0;}
+}
+@-webkit-keyframes explosion5 {
+    0% {opacity: 1.0;}
+    70% {width:3px; height:3px;opacity: 1.0;  -webkit-transform: translate(-150px, -180px);}
+    90% {width:160px; height:160px;opacity: 1.0;}
+    99% {width:160px; height:160px; opacity: 0.0; -webkit-transform: translate(-150px, -180px);}
+    100% {width:3px; height:3px;opacity: 0.0;}
+}
+
+@keyframes explosion6 {
+    0% {opacity: 1.0;}
+    70% {width:3px; height:3px;opacity: 1.0;  transform: translate(-25px, -275px);}
+    90% {width:180px; height:180px;opacity: 1.0;}
+    99% {width:180px; height:180px; opacity: 0.0; transform: translate(-25px, -275px);}
+    100% {width:3px; height:3px;opacity: 0.0;}
+}
+@-webkit-keyframes explosion6 {
+    0% {opacity: 1.0;}
+    70% {width:3px; height:3px;opacity: 1.0;  -webkit-transform: translate(-25px, -275px);}
+    90% {width:180px; height:180px;opacity: 1.0;}
+    99% {width:180px; height:180px; opacity: 0.0; -webkit-transform: translate(-25px, -275px);}
+    100% {width:3px; height:3px;opacity: 0.0;}
+}
+
+
+#stage {
+    margin-top:10px;
+    &:hover #fireworks1 {
+        -webkit-animation: explosion1 2s ease-out infinite;
+        animation: explosion1 2s ease-out infinite;
+        -webkit-animation-delay: 3s;
+        animation-delay: 3s;
+    }
+    &:hover #fireworks2 {
+        -webkit-animation: explosion2 2s ease-out infinite;
+        animation: explosion2 2s ease-out infinite;
+        -webkit-animation-delay: 3.5s;
+        animation-delay: 3.5s;
+    }
+    &:hover #fireworks3 {
+        -webkit-animation: explosion3 2s ease-out infinite;
+        animation: explosion3 2s ease-out infinite;
+        -webkit-animation-delay: 4s;
+        animation-delay: 4s;
+    }
+    &:hover #fireworks4 {
+        -webkit-animation: explosion4 2s ease-out infinite;
+        animation: explosion4 2s ease-out infinite;
+        -webkit-animation-delay: 4.5s;
+        animation-delay: 4.5s;
+    }
+    &:hover #fireworks5 {
+        -webkit-animation: explosion5 2s ease-out infinite;
+        animation: explosion5 2s ease-out infinite;
+        -webkit-animation-delay: 6s;
+        animation-delay: 6s;
+    }
+    &:hover #fireworks6 {
+        -webkit-animation: explosion6 2s ease-out infinite;
+        animation: explosion6 2s ease-out infinite;
+        -webkit-animation-delay: 6.5s;
+        animation-delay: 6.5s;
+    }
+
+    &:hover #backgroundContainer > #treeFireworksContainer > #innerTree, .hover_effect #backgroundContainer > #treeFireworksContainer > #innerTree {
+        opacity:0;
+    }
+    &:hover #backgroundContainer, .hover_effect #backgroundContainer {
+        background:url(../../images/bg.png) no-repeat center -500px;
+    }
+    &:hover #christmasText, .hover_effect #christmasText {
+        opacity:0;
+    }
+    
+    //a 
+    &:hover #letter1, .hover_effect #letter1 {
+        @include translate(-180px, -410px);
+    }
+    //n
+    &:hover #letter2, .hover_effect #letter2 {
+        @include translate(-165px, -410px);
+    }
+    //d
+    &:hover #letter3, .hover_effect #letter3 {
+        @include translate(-150px, -410px);
+    }
+
+    //h
+    &:hover #letter4, .hover_effect #letter4 {
+        @include translate(-125px, -410px);
+    }
+    //a
+    &:hover #letter5, .hover_effect #letter5 {
+        @include translate(-110px, -410px);
+    }
+    //v
+    &:hover #letter6, .hover_effect #letter6 {
+        @include translate(-95px, -410px);
+    }
+    //e
+    &:hover #letter7, .hover_effect #letter7 {
+        @include translate(-80px, -410px);
+    }
+
+    //a
+    &:hover #letter8, .hover_effect #letter8 {
+        @include translate(-55px, -410px);
+    }
+
+    //h
+    &:hover #letter9, .hover_effect #letter9 {
+        @include translate(-30px, -410px);
+    }
+    //a
+    &:hover #letter10, .hover_effect #letter10 {
+        @include translate(-15px, -410px);
+    }
+    //p
+    &:hover #letter11, .hover_effect #letter11 {
+        @include translate(0px, -410px);
+    }
+    //p
+    &:hover #letter12, .hover_effect #letter12 {
+        @include translate(15px, -410px);
+    }
+    //y
+    &:hover #letter13, .hover_effect #letter13 {
+        @include translate(30px, -410px);
+    }
+
+    //n
+    &:hover #letter14, .hover_effect #letter14 {
+        @include translate(55px, -410px);
+    }
+    //e
+    &:hover #letter15, .hover_effect #letter15 {
+        @include translate(70px, -410px);
+    }
+    //w
+    &:hover #letter16, .hover_effect #letter16 {
+        @include translate(80px, -410px);
+    }
+
+    //y
+    &:hover #letter17, .hover_effect #letter17 {
+        @include translate(115px, -410px);
+    }
+    //e
+    &:hover #letter18, .hover_effect #letter18 {
+        @include translate(130px, -410px);
+    }
+    //a
+    &:hover #letter19, .hover_effect #letter19 {
+        @include translate(145px, -410px);
+    }
+    //r
+    &:hover #letter20, .hover_effect #letter20 {
+        @include translate(160px, -410px);
+    }
+    //!
+    &:hover #letter21, .hover_effect #letter21 {
+        @include translate(175px, -410px);
+    }
+}
+
+
