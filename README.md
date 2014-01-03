@@ -19,5 +19,4 @@ For further info about this project, please contact me at gem@gembarrett.com. Th
 
 Glitches I am currently working on:
 - flash of fireworks outside specified area
-- compatibility with touch-devices (currently the JS provides a temporary fix for iOS, but breaks for Android)
 - occasional background flash on initial background-position change animation
