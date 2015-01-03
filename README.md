@@ -14,8 +14,3 @@ This 12-hour experiment in CSS3 animation demonstrates the use of CSS3 keyframes
 Any bug submissions or suggestions for improvements or  features (I'd like to add snow to the animation at some point) gratefully received.
 
 For further info about this project, please contact me at gem@gembarrett.com. The rest of my portfolio is at gembarrett.com if you're curious :)
-
-
-Glitches I am currently working on:
-- flash of fireworks outside specified area
-- occasional background flash on initial background-position change animation
