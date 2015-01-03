@@ -1,6 +1,8 @@
 New Years Eve CSS3 experiment
 =============
 
+**Final animation can be seen at http://gembarrett.com/ny14/**
+
 Experiment in CSS3 animation
 
 This 12-hour experiment in CSS3 animation demonstrates the use of CSS3 keyframes (fireworks), sprites (background image), and other transition styles. 
